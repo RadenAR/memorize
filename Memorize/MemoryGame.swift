@@ -16,6 +16,18 @@ struct MemoryGame<CardContent> {
         print("card chosen: \(card)")
     }
     
+    init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
+        cards = Array<Card>()
+        // for loop syntax is for name of incrementer, in iteratable thing (range, array etc)
+        // two dots mean up to but not including
+        // structs give you an init that is pre made as below but classes need to be done with equal signs or making your own one
+        for pairIndex in 0..<numberOfPairsOfCards {
+            let content = cardContentFactory(pairIndex)
+            cards.append(Card(isFaceUp: false, isMatched: false, content: content))
+            cards.append(Card(isFaceUp: false, isMatched: false, content: content))
+        }
+    }
+    
     struct Card {
         var isFaceUp: Bool
         var isMatched: Bool
