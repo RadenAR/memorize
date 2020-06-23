@@ -9,6 +9,7 @@
 import Foundation
 
 // we add cardcontent as it needs to be specified like when using an array and below in the card struct we use that type. insert String or Int etc
+// cardcontent is our "dont care type"
 struct MemoryGame<CardContent> {
     var cards: Array<Card>
     
