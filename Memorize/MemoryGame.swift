@@ -24,14 +24,17 @@ struct MemoryGame<CardContent> {
         // structs give you an init that is pre made as below but classes need to be done with equal signs or making your own one
         for pairIndex in 0..<numberOfPairsOfCards {
             let content = cardContentFactory(pairIndex)
-            cards.append(Card(isFaceUp: false, isMatched: false, content: content))
-            cards.append(Card(isFaceUp: false, isMatched: false, content: content))
+            cards.append(Card(id: pairIndex*2, content: content))
+            cards.append(Card(id: pairIndex*2 + 2, content: content))
         }
     }
     
-    struct Card {
-        var isFaceUp: Bool
-        var isMatched: Bool
+    // constrains and gains, we constrain to do things this way and we gain something in using it
+    struct Card: Identifiable {
+        var id: Int
+        // below we give an initialized dafault value
+        var isFaceUp: Bool = false
+        var isMatched: Bool = false
         var content: CardContent
     }
 }

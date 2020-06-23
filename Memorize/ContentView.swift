@@ -40,10 +40,12 @@ import SwiftUI
 
 //  equivalent to
 struct ContentView: View {
+    // you would not call this viewModel but it is for education purposes
+    var viewModel: EmojiMemoryGame
     var body: some View {
         HStack {
-            ForEach(0..<4) { index in
-                CardView(isFaceUp: false)
+            ForEach(viewModel.cards) { card in
+                CardView(card: card)
             }
         }
             .foregroundColor(Color.orange)
@@ -53,13 +55,13 @@ struct ContentView: View {
 }
 
 struct CardView: View {
-    var isFaceUp: Bool
+    var card: MemoryGame<String>.Card
     var body: some View {
         ZStack {
-            if isFaceUp {
+            if card.isFaceUp {
                 RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
                 RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
-                Text("👻")
+                Text(card.content)
             } else {
                 // for back of card
                 RoundedRectangle(cornerRadius: 10.0).fill()
@@ -71,6 +73,6 @@ struct CardView: View {
 // the following code creates the preview on the right side as we work we can preview the changes there
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: EmojiMemoryGame())
     }
 }
