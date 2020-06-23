@@ -45,7 +45,7 @@ struct ContentView: View {
     var body: some View {
         HStack {
             ForEach(viewModel.cards) { card in
-                CardView(card: card)
+                CardView(card: card).onTapGesture { self.viewModel.choose(card: card) }
             }
         }
             .foregroundColor(Color.orange)
