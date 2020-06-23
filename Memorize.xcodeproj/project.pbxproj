@@ -13,6 +13,7 @@
 		CF03B40F2496C32200CC3234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF03B40E2496C32200CC3234 /* Assets.xcassets */; };
 		CF03B4122496C32200CC3234 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF03B4112496C32200CC3234 /* Preview Assets.xcassets */; };
 		CF03B4152496C32200CC3234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF03B4132496C32200CC3234 /* LaunchScreen.storyboard */; };
+		CF03F20B24A289CB0021209D /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF03F20A24A289CB0021209D /* MemoryGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CF03B4112496C32200CC3234 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CF03B4142496C32200CC3234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF03B4162496C32200CC3234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF03F20A24A289CB0021209D /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		CF03B4072496C32100CC3234 /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
+				CF03F20A24A289CB0021209D /* MemoryGame.swift */,
 				CF03B4082496C32100CC3234 /* AppDelegate.swift */,
 				CF03B40A2496C32100CC3234 /* SceneDelegate.swift */,
 				CF03B40C2496C32100CC3234 /* ContentView.swift */,
@@ -148,6 +151,7 @@
 			files = (
 				CF03B4092496C32100CC3234 /* AppDelegate.swift in Sources */,
 				CF03B40B2496C32100CC3234 /* SceneDelegate.swift in Sources */,
+				CF03F20B24A289CB0021209D /* MemoryGame.swift in Sources */,
 				CF03B40D2496C32100CC3234 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
