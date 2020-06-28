@@ -9,7 +9,7 @@
 import SwiftUI
 
 // if it had a superclass it would be class EmojiMemoryGame: nameOfSuperclass {}
-class EmojiMemoryGame {
+class EmojiMemoryGame: ObservableObject {
     
     // you should call the model game or something more descriptive
     // private means can only be changed by emoji memory game
