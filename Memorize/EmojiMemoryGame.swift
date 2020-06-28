@@ -33,7 +33,7 @@ class EmojiMemoryGame {
     static func createMemoryGame() -> MemoryGame<String> {
         let emojis: Array<String> = ["👻", "🎃", "🕷"]
         return MemoryGame<String>(numberOfPairsOfCards: emojis.count) { pairIndex in
-            return emojis[pairIndex]
+            emojis[pairIndex]
         }
     }
     
@@ -42,7 +42,7 @@ class EmojiMemoryGame {
     // things that the view can see from the model
     // we want the views to be as simple as possible. thus if we must change data for presentation such as if we got it over the network we would do that in a place such as below
     var cards: Array<MemoryGame<String>.Card> {
-        return model.cards
+         model.cards
     }
     
     // MARK: - Intents(s)
