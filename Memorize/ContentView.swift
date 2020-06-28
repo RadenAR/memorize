@@ -43,14 +43,25 @@ struct ContentView: View {
     // you would not call this viewModel but it is for education purposes
     var viewModel: EmojiMemoryGame
     var body: some View {
-        HStack {
-            ForEach(viewModel.cards) { card in
-                CardView(card: card).onTapGesture { self.viewModel.choose(card: card) }
+        if viewModel.cards.count < 10 {
+            return HStack {
+                ForEach(viewModel.cards) { card in
+                    CardView(card: card).onTapGesture { self.viewModel.choose(card: card) }
+                }
             }
+                .foregroundColor(Color.orange)
+                .padding()
+                .font(Font.largeTitle)
+        } else {
+            return HStack {
+                ForEach(viewModel.cards) { card in
+                    CardView(card: card).onTapGesture { self.viewModel.choose(card: card) }
+                }
+            }
+                .foregroundColor(Color.orange)
+                .padding()
+                .font(Font.title)
         }
-            .foregroundColor(Color.orange)
-            .padding()
-            .font(Font.largeTitle)
     }
 }
 
