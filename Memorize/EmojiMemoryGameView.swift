@@ -41,7 +41,7 @@ import SwiftUI
 //  equivalent to
 struct EmojiMemoryGameView: View {
     // you would not call this viewModel but it is for education purposes
-    var viewModel: EmojiMemoryGame
+    @ObservedObject var viewModel: EmojiMemoryGame
     var body: some View {
         if viewModel.cards.count < 10 {
             return HStack {
