@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  EmojiMemoryGameView.swift
 //  Memorize
 //
 //  Created by Raden Abdul Rahman on 6/14/20.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-//struct ContentView: View {
+//struct EmojiMemoryGameView: View {
 //    var body: some View {
 //        // h stack is horizontally stacked or arranged next to each other
 //        // hstack has a spacing attribute which occurs between them
