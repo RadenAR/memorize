@@ -43,42 +43,48 @@ struct EmojiMemoryGameView: View {
     // you would not call this viewModel but it is for education purposes
     @ObservedObject var viewModel: EmojiMemoryGame
     var body: some View {
-        if viewModel.cards.count < 10 {
-            return HStack {
-                ForEach(viewModel.cards) { card in
-                    CardView(card: card).onTapGesture { self.viewModel.choose(card: card) }
-                }
+        HStack {
+            ForEach(viewModel.cards) { card in
+                CardView(card: card).onTapGesture { self.viewModel.choose(card: card) }
             }
-                .foregroundColor(Color.orange)
-                .padding()
-                .font(Font.largeTitle)
-        } else {
-            return HStack {
-                ForEach(viewModel.cards) { card in
-                    CardView(card: card).onTapGesture { self.viewModel.choose(card: card) }
-                }
-            }
-                .foregroundColor(Color.orange)
-                .padding()
-                .font(Font.title)
         }
+            .foregroundColor(Color.orange)
+            .padding()
     }
 }
 
 struct CardView: View {
     var card: MemoryGame<String>.Card
     var body: some View {
+        GeometryReader { geometry in
+            self.body(for: geometry.size)
+        }
+    }
+    
+    // we do the following instead of in line writing to avoid using self everywhere
+    func body(for size: CGSize) -> some View {
         ZStack {
             if card.isFaceUp {
-                RoundedRectangle(cornerRadius: 10.0).fill(Color.white)
-                RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 3)
+                RoundedRectangle(cornerRadius: cornerRadius).fill(Color.white)
+                RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: edgeLineWidth)
                 Text(card.content)
             } else {
                 // for back of card
-                RoundedRectangle(cornerRadius: 10.0).fill()
+                RoundedRectangle(cornerRadius: cornerRadius).fill()
             }
         }
         .aspectRatio(2/3, contentMode: .fit)
+        .font(Font.system(size: self.fontSize(for: size)))
+    }
+    
+    // MARK: - Drawing Constants
+    // these things are constants that we use in our code
+    let cornerRadius: CGFloat = 10.0
+    let edgeLineWidth: CGFloat = 3
+    
+    // this is complexity we take out of the body function
+    func fontSize(for size: CGSize) -> CGFloat {
+        min(size.width, size.height) * 0.75
     }
 }
 
