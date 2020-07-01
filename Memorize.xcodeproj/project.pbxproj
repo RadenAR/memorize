@@ -18,6 +18,7 @@
 		CFF1192624ABCFDF0046484B /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1192524ABCFDF0046484B /* Grid.swift */; };
 		CFF1192824ABE6F60046484B /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1192724ABE6F60046484B /* GridLayout.swift */; };
 		CFF1192A24ABEC1F0046484B /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1192924ABEC1F0046484B /* Array+Identifiable.swift */; };
+		CFF1192C24AC11D10046484B /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF1192B24AC11D10046484B /* Array+Only.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		CFF1192524ABCFDF0046484B /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		CFF1192724ABE6F60046484B /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		CFF1192924ABEC1F0046484B /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
+		CFF1192B24AC11D10046484B /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				CF03B4082496C32100CC3234 /* AppDelegate.swift */,
 				CF03B40A2496C32100CC3234 /* SceneDelegate.swift */,
 				CF03F20A24A289CB0021209D /* MemoryGame.swift */,
+				CFF1192B24AC11D10046484B /* Array+Only.swift */,
 				CF03B40C2496C32100CC3234 /* EmojiMemoryGameView.swift */,
 				CFF1192524ABCFDF0046484B /* Grid.swift */,
 				CFF1192924ABEC1F0046484B /* Array+Identifiable.swift */,
@@ -164,6 +167,7 @@
 				CF03B4092496C32100CC3234 /* AppDelegate.swift in Sources */,
 				CF03B40B2496C32100CC3234 /* SceneDelegate.swift in Sources */,
 				CF03F20B24A289CB0021209D /* MemoryGame.swift in Sources */,
+				CFF1192C24AC11D10046484B /* Array+Only.swift in Sources */,
 				CF03B40D2496C32100CC3234 /* EmojiMemoryGameView.swift in Sources */,
 				CF03F20D24A28C000021209D /* EmojiMemoryGame.swift in Sources */,
 				CFF1192A24ABEC1F0046484B /* Array+Identifiable.swift in Sources */,

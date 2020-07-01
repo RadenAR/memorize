@@ -71,8 +71,10 @@ struct CardView: View {
                 RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: edgeLineWidth)
                 Text(card.content)
             } else {
-                // for back of card
-                RoundedRectangle(cornerRadius: cornerRadius).fill()
+                if !card.isMatched {
+                    // for back of card
+                    RoundedRectangle(cornerRadius: cornerRadius).fill()
+                }
             }
         }
         .aspectRatio(2/3, contentMode: .fit)
